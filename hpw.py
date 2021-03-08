@@ -5,11 +5,11 @@ import sqlite3
 db = sqlite3.connect("nerd.db")
 c = db.cursor()
 
-"""
+
 c.execute("CREATE TABLE Users(id integer PRIMARY KEY, Fname text, Lname text, password_salt BLOB, password BLOB)")
 
 db.commit()
-"""
+
 
 salt = secrets.token_hex(50)
 fname = input("Fname:")
